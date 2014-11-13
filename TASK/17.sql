@@ -1,0 +1,1 @@
+SELECT DISTINCT c.FirstName, c.LastName, c.Country FROM Invoice i INNER JOIN Customer c ON i.CustomerId = c.CustomerId WHERE c.Country IN (SELECT BillingCountry FROM Invoice GROUP BY BillingCountry HAVING COUNT(*)>10);

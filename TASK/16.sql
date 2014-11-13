@@ -1,0 +1,1 @@
+SELECT t.Name, i.UnitPrice, g.Name FROM InvoiceLine i INNER JOIN Track t INNER JOIN Genre g ON i.TrackId=t.TrackId AND t.GenreId=g.GenreId WHERE i.InvoiceId=410 OR i.InvoiceId=404 OR i.InvoiceId=299 ORDER BY i.InvoiceId DESC;
